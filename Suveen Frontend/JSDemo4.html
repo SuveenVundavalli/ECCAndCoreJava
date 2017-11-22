@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function display() {
+            document.getElementById('inputDisplay').innerHTML = document.getElementById('inputField').value;
+        }
+        function display1() {
+            document.getElementById('inputDisplay1').innerHTML = document.getElementById('inputField1').value;
+        }
+        function display2() {
+            document.getElementById('inputDisplay2').innerHTML = document.getElementById('inputField2').value;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Type something" id="inputField" oninput="display()">
+    <input type="text" placeholder="Type something" id="inputField1" onkeyup="display1()">
+     <input type="text" placeholder="Type something" id="inputField2" onkeydown="display2()">
+    <p id="inputDisplay"></p>
+    <p id="inputDisplay1"></p>
+    <p id="inputDisplay2"></p>
+</body>
+</html>

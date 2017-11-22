@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays</title>
+    <script>
+        function show() {
+            var a = [10, 20, 30];
+            a.push(11);
+            
+            var p = document.getElementById('p1');
+            var text = "<ul>";
+            for (i = 0; i < a.length; i++)
+                text += "<li>" + a[i] + "</li>";
+            text += "</ul>";
+            p.innerHTML = text;
+        }
+    </script>
+</head>
+
+<body>
+    <input type="submit" value="show arrays" onmouseover="show()">
+    <p id="p1">Show output here</p>
+</body>
+</html>

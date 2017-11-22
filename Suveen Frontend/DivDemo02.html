@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Div Demo 2</title>
+    <style>
+        body {
+            color: yellow;
+        }
+
+        .container {
+            height: 400px;
+            width: 600px;
+            background: pink;
+            position: relative;
+        }
+
+        .header {
+            background: blue;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+
+        }
+
+        .childLeft {
+            background: green;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        .childRight {
+            background: red;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 40px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .footer {
+            background: black;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 75px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Header Area</h1>
+        </div>
+        <div class="childLeft">
+            <h1>left child</h1>
+        </div>
+        <div class="childRight">
+            <h1>right child</h1>
+        </div>
+        <div class="footer">
+            <h1>Footer Area</h1>
+        </div>
+    </div>
+
+</body>
+</html>

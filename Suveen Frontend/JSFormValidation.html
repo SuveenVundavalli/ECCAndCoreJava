@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <script src="/resources/js/JSFormValidation.js"></script>
+</head>
+
+<body>
+    <form action="test.html" name="myForm" onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name" id="name" size="65"></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td><input type="text" name="email" id="email" size="65"></td>
+            </tr>
+            <tr>
+                <td>Telephone</td>
+                <td><input type="text" size="65" name="mobile" id="mobile"></td>
+            </tr>
+
+            <tr>
+                <td>What can we help you with?</td>
+                <td><select type="text" id="category">
+<option value=""> </option>
+<option value="cs">Customer Service</option>
+<option value="question">Question</option>
+<option value="comment">Comment</option>
+<option value="consultation">Consultation</option>
+<option value="other">Other</option>
+</select></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td><input type="radio" name="gender" value="male" id="gender"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hobbies</td>
+                <td><input type="checkbox" name="hobby" value="surfing internet"> Surfing Internet<br>
+                    <input type="checkbox" name="hobby" value="Playing Cricket"> Playing Cricket<br>
+                    <input type="checkbox" name="hobby" value="Reading books"> Reading Books
+                </td>
+            </tr>
+
+            <tr>
+                <td>Comments: </td>
+                <td><textarea cols="55" id="comments"></textarea></td>
+            </tr>
+            <tr>
+                <td align="center"><input type="submit" value="Send"></td>
+                <td align="center">
+                    <input type="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

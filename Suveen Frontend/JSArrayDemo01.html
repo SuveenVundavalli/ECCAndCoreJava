@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resources/css/FormInputStyles.css">
+    <script>
+        var fruits = ['Banana', 'Apple', 'Pineapple', 'Orange', 'Kiwi', 'Pears', 'Plums', 'CustardApple'];
+
+        function displayItems() {
+
+            var text = "";
+            for (var i = 0; i < fruits.length; i++) {
+                text += '<option value="' + fruits[i] + '" id="' + fruits[i] + '">' +
+                    fruits[i] +
+                    '</option>';
+            }
+            var list = document.getElementById("list");
+            list.innerHTML = text;
+        }
+        window.onload = function() {
+            displayItems();
+        }
+
+        function addItem() {
+            var addVal = document.getElementById("item");
+            if (addVal.value != "") {
+                fruits.push(addVal.value);
+            }
+            displayItems();
+
+        }
+
+        function searchItem() {
+            var value1, text;
+            var searchVal = document.getElementById("item");
+            for (var i = 0; i < fruits.length; i++) {
+                value1 = fruits[i].toLowerCase();
+                //console.log(value1.substring(0, searchVal.value.length - 1));
+                if (value1.substring(0, searchVal.value.length) === searchVal.value.toLowerCase()) {
+                    value1 = fruits[i];
+                    text += '<option value="' + value1 + '" id="' + value1 + '">' +
+                        value1 +
+                        '</option>';
+                }
+            }
+            var list = document.getElementById("list");
+            list.innerHTML = text;
+        }
+
+        function deleteItem() {
+            var list = document.getElementById("list");
+            console.log(list.value.length);
+            for(var i=0; i<list.value.length;i++){
+                console.log(list[i].value);
+            }
+            if (list.value != "") {
+                console.log(list.value);
+                var index = fruits.indexOf(list.value);
+                if (index > -1) {
+                    fruits.splice(index, 1);
+                }
+                displayItems();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Enter Item</td>
+            <td>: </td>
+            <td colspan="3"><input type="text" name="item" id="item"></td>
+        </tr>
+        <tr>
+            <td>Items</td>
+            <td>:</td>
+            <td colspan="3">
+
+                <select name="cars" size="15" id="list" multiple>
+                    
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><input type="submit" onclick="addItem()" value="add"></td>
+            <td><input type="submit" onclick="searchItem()" value="search"></td>
+            <td><input type="submit" onclick="deleteItem()" value="delete"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td colspan="3"><input type="submit" value="Display Items" onclick="displayItems()"></td>
+
+        </tr>
+    </table>
+</body>
+
+</html>

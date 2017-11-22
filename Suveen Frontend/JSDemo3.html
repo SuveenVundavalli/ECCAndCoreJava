@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Demo</title>
+    <script>
+        sum = 0;
+
+        function add() {
+            a = document.getElementById('value1');
+            b = document.getElementById('value2');
+            sum = parseInt(a.value) + parseInt(b.value);
+            document.getElementById('totalSum').innerHTML = sum;
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Enter a number : </td>
+            <td><input type="number" id="value1"></td>
+        </tr>
+        <tr>
+            <td>Enter another number : </td>
+            <td><input type="number" id="value2"></td>
+        </tr>
+        <tr>
+            <td>Sum : </td>
+            <td>
+                <p id="totalSum" onmouseover="add()">Hover me!!</p>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="calculate" onclick="add()"></td>
+        </tr>
+    </table>
+</body>
+</html>

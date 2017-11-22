@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navbar demo</title>
+    <style>
+        div.navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: green;
+
+        }
+
+        div.navbar-left li {
+            float: left;
+        }
+        div.navbar-right li {
+            float: right;
+        }
+
+        div.navbar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        div.navbar li a:hover {
+            display: block;
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        div.navbar li a:active {
+            display: block;
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        div.navbar li a[tabindex]:focus {
+            display: block;
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <ul>
+                <li><a href="" tabindex="1">Home</a></li>
+                <li><a href="" tabindex="2">News</a></li>
+                <li><a href="" tabindex="3">Contact</a></li>
+                <li><a href="" tabindex="4">About</a></li>
+           
+                <li style="float: right"><a href="" tabindex="3">SignUp</a></li>
+                <li style="float: right"><a href="" tabindex="4">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

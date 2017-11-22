@@ -1,0 +1,30 @@
+ body {
+     background-image: url(../images/bgimage.png);
+     background-repeat: no-repeat;
+     background-origin: content-box;
+     color: yellow;
+     margin: 10px;
+     padding: 20px;
+ }
+
+ .effects1 {
+     color: green;
+     text-align: center;
+ }
+
+ .effects2 {
+     color: Blue;
+     text-align: center;
+ }
+
+ .effects3 {
+     color: maroon;
+     font-weight: bold;
+     font-style: italic;
+     text-decoration: underline;
+ }
+
+ #effect4 {
+     font-size: 25px;
+     color: black;
+ }
